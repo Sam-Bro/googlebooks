@@ -1,18 +1,27 @@
 import React  from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Container } from 'react-bootstrap';
+
+import Search from "./pages/Search"
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
+    <Router>
+      <Container>
+        {/* <Nav /> */}
+        <Switch>
+          <Route exact path={["/", "/search"]}>
+            <Search />
+          </Route>
+          {/* <Route>
+            <NoMatch />
+          </Route> */}
+        </Switch>
+      </Container>
+    </Router>
   );
 }
 
