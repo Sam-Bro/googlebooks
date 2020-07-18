@@ -22,7 +22,7 @@ function App() {
         </Switch>
       </Container>
     </Router>
-  );
+  ); 
 }
 
 
